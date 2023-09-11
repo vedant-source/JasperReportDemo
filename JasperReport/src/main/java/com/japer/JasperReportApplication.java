@@ -20,10 +20,11 @@ public class JasperReportApplication {
 	
 		try {
 		System.out.println("Started...");
-		//C:\JasperReportDemo\JasperReport\src\main\resources
-		String jasperFilePath = "C://JasperReportDemo//JasperReport//src//main//resources//MyJasper";
-		//final String jasperFilePath = "C:\\JasperReportDemo\\JasperReport\\src\\main\\resources\\MyJasper";
-			
+		
+	String jasperFilePath = "C:\\JasperReportDemo\\JasperReport\\src\\main\\resources\\MyJasper.jrxml";
+		
+		//String jasperFilePath = "JasperReport\\src\\main\\resources\\MyJasper.jrxml";
+		
 		Map<String, Object> parameters = new HashMap<>();
 		parameters.put("studentName", "Rasika");
 		
@@ -40,7 +41,7 @@ public class JasperReportApplication {
 		
 		JasperPrint fillReport = JasperFillManager.fillReport(compileReport, parameters, beanCollectionDataSource);
 		
-		JasperExportManager.exportReportToPdfFile(fillReport, "C:\\Jasper.pdf");
+		JasperExportManager.exportReportToPdfFile(fillReport, "C:\\aaa\\v.pdf");
 		
 		System.out.println("Jasper Report Generated ... !!!");
 		
